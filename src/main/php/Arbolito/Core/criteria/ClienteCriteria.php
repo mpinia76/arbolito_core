@@ -73,6 +73,24 @@ class ClienteCriteria extends Criteria{
 
     private $nroSocio;
 
+    private $nroSocioExacto;
+
+    /**
+     * @return mixed
+     */
+    public function getNroSocioExacto()
+    {
+        return $this->nroSocioExacto;
+    }
+
+    /**
+     * @param mixed $nroSocioExacto
+     */
+    public function setNroSocioExacto($nroSocioExacto)
+    {
+        $this->nroSocioExacto = $nroSocioExacto;
+    }
+
     /**
      * @return mixed
      */

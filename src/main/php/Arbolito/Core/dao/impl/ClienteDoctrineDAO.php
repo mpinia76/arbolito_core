@@ -78,6 +78,13 @@ class ClienteDoctrineDAO extends CrudDAO implements IClienteDAO{
             $queryBuilder->setParameter( "nroSocio" , "%$nroSocio%" );
         }
 
+        $nroSocioExacto = $criteria->getnroSocioExacto();
+        if( !empty($nroSocioExacto) ){
+            $queryBuilder->andWhere("upper(c.nroSocio)  = :nroSocioExacto");
+            $queryBuilder->setParameter( "nroSocioExacto" , "$nroSocioExacto" );
+
+        }
+
 		$tieneCtaCte = $criteria->getTieneCtaCte();
 		if( !empty($tieneCtaCte) ){
 			$queryBuilder->andWhere("cc.oid IS NOT NULL ");
