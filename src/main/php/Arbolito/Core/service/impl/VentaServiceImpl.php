@@ -188,11 +188,13 @@ class VentaServiceImpl extends CrudService implements IVentaService {
 			$venta->setEstado( EstadoVenta::PagadaParcialmente );
 		}
 
-        /*$ultimoComprobante = $this->getUltimoComprobante();
+		if (!$venta->getNroComprobante()){
+            $ultimoComprobante = $this->getUltimoComprobante();
 
+            $venta->setNroComprobante(($ultimoComprobante+1));
+        }
 
-
-		$venta->setNroComprobante(($ultimoComprobante+1));*/
+        /**/
 
 		//creo un movimiento de caja "haber" por el monto a pagar.
 		$movimiento = new MovimientoVenta();
