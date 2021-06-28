@@ -258,11 +258,14 @@ class VentaServiceImpl extends CrudService implements IVentaService {
 		//hay que reestablecer el stock de los productos vendidos.
 		foreach ($venta->getDetalles() as $detalle) {
 
-			$producto = $detalle->getProducto();
-			$cantidad = $detalle->getCantidad();
 
-			$producto->setStock($producto->getStock()+$cantidad);
-			ServiceFactory::getProductoService()->update( $producto );
+            if ($detalle->getStockActualizado()===2) {
+                $producto = $detalle->getProducto();
+                $cantidad = $detalle->getCantidad();
+
+                $producto->setStock($producto->getStock() + $cantidad);
+                ServiceFactory::getProductoService()->update($producto);
+            }
 
 			//$producto->updateStock( $cantidad );
 
