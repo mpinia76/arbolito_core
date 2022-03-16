@@ -66,10 +66,10 @@ class Venta extends \Arbolito\Core\model\Venta implements \Doctrine\ORM\Proxy\Pr
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'fecha', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'cliente', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'monto', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoPagado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoDebe', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'ganancia', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoDevolucion', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoActualizado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'estado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'observaciones', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'user', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'detalles', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'devoluciones'];
+            return ['__isInitialized__', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'fecha', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'cliente', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'nroComprobante', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'monto', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoPagado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoDebe', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'ganancia', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoDevolucion', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoActualizado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'estado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'observaciones', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'user', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'detalles', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'devoluciones'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'fecha', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'cliente', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'monto', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoPagado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoDebe', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'ganancia', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoDevolucion', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoActualizado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'estado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'observaciones', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'user', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'detalles', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'devoluciones'];
+        return ['__isInitialized__', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'fecha', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'cliente', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'nroComprobante', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'monto', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoPagado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoDebe', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'ganancia', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoDevolucion', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'montoActualizado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'estado', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'observaciones', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'user', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'detalles', '' . "\0" . 'Arbolito\\Core\\model\\Venta' . "\0" . 'devoluciones'];
     }
 
     /**
@@ -176,6 +176,28 @@ class Venta extends \Arbolito\Core\model\Venta implements \Doctrine\ORM\Proxy\Pr
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function getNroComprobante()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNroComprobante', []);
+
+        return parent::getNroComprobante();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setNroComprobante($nroComprobante)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNroComprobante', [$nroComprobante]);
+
+        return parent::setNroComprobante($nroComprobante);
+    }
+
     /**
      * {@inheritDoc}
      */

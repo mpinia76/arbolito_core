@@ -21,10 +21,10 @@ class ArbolitoConfig {
 
 
 
-	private $dbHost = '163.10.35.37';
+	private $dbHost = 'localhost';
 	private $dbName = "cose_arbolito";
 	private $dbUser = 'root';
-	private $dbPassword = 'secyt';
+	private $dbPassword = '';
 
 	private $connectionDriver = "pdo_mysql";
 	private $defaultPersistenUnit = "default";
